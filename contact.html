@@ -97,9 +97,10 @@
                             <h3>Fill out this form, and we'll be in touch.</h3>
                             <p>Your details</p>
                             <form action="https://getform.io/f/8e3cebfe-e16c-4d41-a7fc-8a3caf06c9f7" method="POST" target="_blank">
-                                <p><input type="text" placeholder="Name" required name="Name"></p>
-                                <p><input type="text" placeholder="Email" required name="Email"></p>
-                                <p><input type="text" placeholder="What can we do for you?s" required name="Message"></p>
+                                <label for="Name">Name:</label>
+                                <input type="text" id="Name" name="Name" size="30"><br><br>
+                                <label for="message">What can we do for you?</label>
+                                <input type="text" id="message" name="message" maxlength="5000" size="30"><br><br>
                                 
                                 <p>
                                   <button class="w3-button w3-light-grey w3-padding-large" type="submit">

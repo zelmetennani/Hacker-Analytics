@@ -21,17 +21,17 @@
     <meta property="og:site_name" content="https://hackeranalytics.com">
     <meta property="og:type" content="product">
     <meta property="og:image" content="https://hackeranalytics/images/Hacker Analytics.png">
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZDN6DC684X"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-ZDN6DC684X');
+    </script>
 </head>
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZDN6DC684X"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-ZDN6DC684X');
-</script>
 
 <body>
     <div class="yeo-slogan">
@@ -45,8 +45,20 @@
                             </a>
                         </section>
                         <section class="navbar-section">
-                            <a class="btn btn-primary btn-hire-me" href="KnowledeBase.html">Threat Intel Blog</a>
-                            <a style="margin-left: 10px;" class="btn btn-primary btn-hire-me" href="contact.html">Contact</a>
+                            <div class="dropdown">
+                                <a href="#" class="btn btn-link dropdown-toggle" tabindex="0">
+                                    Services <i class="icon icon-caret"></i>
+                                </a>
+                                <ul class="menu">
+                                    <li><a href="soc2-compliance.html">SOC 2 Compliance</a></li>
+                                    <li><a href="iso27001-compliance.html">ISO 27001</a></li>
+                                    <li><a href="pci-dss-compliance.html">PCI DSS</a></li>
+                                    <li><a href="attack-surface-management.html">Attack Surface Management</a></li>
+                                    <li><a href="security-consulting.html">Security Consulting</a></li>
+                                </ul>
+                            </div>
+                            <a class="btn btn-link" href="KnowledgeBase.html">Threat Intel Blog</a>
+                            <a class="btn btn-primary btn-hire-me" href="contact.html">Contact</a>
                         </section>
                     </header>
                 </div>

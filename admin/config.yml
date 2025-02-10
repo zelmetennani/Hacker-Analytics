@@ -1,19 +1,20 @@
 backend:
-  name: github
-  repo: zelmetennani/Hacker-Analytics  # Replace with your GitHub repo details
-  branch: main  # or the branch you want to use
-  auth_scope: repo
-  
-media_folder: "static/img"           # Folder where uploaded images will be stored
-public_folder: "/img"                # Folder path relative to your published site
+  name: git-gateway
+  branch: main  # Change this if your default branch is different
+
+site_url: https://hackeranalytics.com
+display_url: https://hackeranalytics.com
+logo_url: https://hackeranalytics.com/logo.png
+
+media_folder: "static/images/uploads" # Adjust to your repo structure
+public_folder: "/images/uploads"
 
 collections:
-  - name: "posts"                    # A unique identifier for this collection
-    label: "Posts"                   # The label used in the CMS UI
-    folder: "content/posts"          # Folder where your posts are stored
-    create: true                     # Allow users to create new posts
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+  - name: "posts"
+    label: "Posts"
+    folder: "content/posts"
+    create: true
+    slug: "{{slug}}"
     fields:
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Body", name: "body", widget: "markdown" }

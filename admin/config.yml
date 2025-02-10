@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: zelmetennani/Hacker Analytics  # Replace with your GitHub repo details
+  repo: zelmetennani/Hacker-Analytics  # Replace with your GitHub repo details
   branch: main  # or the branch you want to use
   auth_scope: repo
   

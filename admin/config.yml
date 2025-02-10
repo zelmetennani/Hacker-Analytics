@@ -4,7 +4,7 @@ backend:
 
 site_url: https://hackeranalytics.com
 display_url: https://hackeranalytics.com
-logo_url: https://hackeranalytics.com/logo.png
+logo_url: https://hackeranalytics.com/Hacker Analytics.png
 
 media_folder: "static/images/uploads" # Adjust to your repo structure
 public_folder: "/images/uploads"

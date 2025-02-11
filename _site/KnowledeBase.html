@@ -7,10 +7,11 @@
     <meta name="robots" content="index, follow">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Hacker Analytics: Expert Cybersecurity Services</title>
+    <title>Hacker Analytics | Threat Intel Blog</title>
     <link rel="icon" type="image/x-icon" href="images/cloud-backup-svgrepo-com.svg">
     <meta name="keywords" content="Cybersecurity">
     <link href="https://fonts.googleapis.com/css?family=Poppins:200,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="./css/spectre.css">
     <link rel="stylesheet" href="./css/spectre-icons.css">
     <link rel="stylesheet" href="./css/spectre-exp.css">
@@ -21,17 +22,62 @@
     <meta property="og:site_name" content="https://hackeranalytics.com">
     <meta property="og:type" content="product">
     <meta property="og:image" content="https://hackeranalytics/images/Hacker Analytics.png">
-    
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WPQSRF1B1P"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+    <style>
+        .article-card {
+            border: 1px solid #dcdcdc;
+            border-radius: 5px;
+            padding: 1.5rem;
+            margin: 1rem 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.2s ease;
+        }
 
-      gtag('config', 'G-WPQSRF1B1P');
-    </script>
+        .article-card:hover {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        .article-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+        }
+
+        .article-meta {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 1rem;
+        }
+
+        .article-summary {
+            margin-bottom: 1.5rem;
+        }
+
+        .btn-read-more {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 500;
+            transition: background-color 0.2s ease;
+        }
+
+        .btn-read-more:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZDN6DC684X"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ZDN6DC684X');
+</script>
 
 <body>
     <div class="yeo-slogan">
@@ -45,19 +91,6 @@
                             </a>
                         </section>
                         <section class="navbar-section">
-                            <div class="dropdown">
-                                <a href="#" class="btn btn-link dropdown-toggle" tabindex="0">
-                                    Services2<i class="icon icon-caret"></i>
-                                </a>
-                                <ul class="menu">
-                                    <li><a href="soc2-compliance.html">SOC 2 Compliance</a></li>
-                                    <li><a href="iso27001-compliance.html">ISO 27001</a></li>
-                                    <li><a href="pci-dss-compliance.html">PCI DSS</a></li>
-                                    <li><a href="attack-surface-management.html">Attack Surface Management</a></li>
-                                    <li><a href="security-consulting.html">Security Consulting</a></li>
-                                </ul>
-                            </div>
-                            <a class="btn btn-link" href="KnowledgeBase.html">Threat Intel Blog</a>
                             <a class="btn btn-primary btn-hire-me" href="contact.html">Contact</a>
                         </section>
                     </header>
@@ -69,9 +102,9 @@
                 <div class="column col-12 col-sm-12">
                     <div class="slogan-content">
                         <h1>
-                            <span class="slogan-bold">Expert cybersecurity services for your organization<span class="blink">_</span></span>
+                            <span class="slogan-bold">Blog and Resources<span class="blink">_</span></span>
                         </h1>
-                        <p>Secure your IT environment with our seasoned cybersecurity profesionals.</p>
+                        <p>Stay informed. Stay Secure.</p>
                         <a class="btn btn-primary btn-lg btn-start hide-sm" target="_blank" href="contact.html">Defend your organization today</a>
 
                     </div>
@@ -83,125 +116,93 @@
                 <a class="btn btn-primary btn-hire-me show-sm" href="contact.html">Defend your organization today</a>
             </div>
         </div>
-        <div class="yeo-do" id="info">
-            <div class="container yeo-body">
-                <div class="columns">
-                    <div class="column col-6 col-sm-12">
-                        <div class="yeo-do-content">
-                            <h3>Why choose us?</h3>
-                            <p></p>
-                            <p>✔️ Our team is comprised of experienced vets from the cybersecurity industry</p>
-                            <p>✔️ Strong commitment to customer satisfaction</p>
-                            <p>✔️ We utilize the latest breakthroughs in security tools to provide the highest level of protection</p>
-                            <p>✔️ We tailor our services to the needs of each individual customer</p>
-                            <p>✔️ Based in the USA, serving customers globally</p>
-                            <p>✔️ Competitive pricing</p>
-                            <a href="contact.html">Learn more<span class="blink">_</span></a>
-                        </div>
-                    </div>
-                    <div class="column col-6 col-sm-12">
-                        <div class="yeo-do-content">
-                            <h3>What do we offer?</h3>
-                            <p></p>                            
-                            <p>✔️ Compliance and standards auditing - SOC2, ISO27001, PCIDSS</p>
-                            <p>✔️ Penetration testing and reporting</p>
-                            <p>✔️ Endpoint protection and management</p>
-                            <p>✔️ 24x7 security operations center</p>                            
-                            <p>✔️ General security consulting - vCISO services</p>
-                            <p>✔️ Cyber security gap analysis <p>
-                            <p>✔️ Cloud security reviews</p>
-                            <p>✔️ External Attack Surface Management (EASM)</p>
-                            <a href="contact.html">Learn more<span class="blink">_</span></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="yeo-client">
+       <!--<div class="yeo-client">
             <div class="container yeo-client-list">
                 <div class="columns">
                     <div class="column col-12">
                         <h3 class="feature-title">
-                            Your Compliance has never been easier
-                        </h3>
+                        Trusted By The Best Clients
+                    </h3>
                         <div class="client-logo">
                             <a href="#" target="_blank">
-                            <img src="images/HIPAA.png" height="40px" alt="">
+                            <img src="./images/algolia.svg" height="40px" alt="">
                         </a>
                             <a href="#" target="_blank">
-                            <img src="images/PCI-DSS.png" height="40px" alt="">
+                            <img src="./images/lapa-logo.svg" height="40px" alt="">
                         </a>
                             <a href="#" target="_blank">
-                            <img src="images/soc2.jpeg" height="40px" alt="">
+                            <img src="./images/hugo.svg" height="40px" alt="">
                         </a>
-                            <img src="images/ISO27001.jpeg" height="40px" alt="">
+                            <a href="#" target="_blank">
+                            <img src="./images/codecademy.svg" height="40px" alt="">
+                        </a>
+                            <a href="#" target="_blank">
+                            <img src="./images/aws.svg" height="40px" alt="">
                         </a>
                             <a href="#" target="_blank">
                             <img src="./images/stripe.svg" height="40px" alt="">
                         </a>
-                        <a href="#" target="_blank">
-                            <img src="images/NIST.png" height="40px" alt="">
-                        </a>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>  
-        <div class="yeo-work" id="we-work">
-            <div class="container yeo-body">
-                <div class="columns">
-                    <div class="column col-12 col-sm-12">
-                     <!-- <h2 class="feature-title">How We Work</h2> -->
-                </div>
-            </div>
-        </div>
-        <div class="yeo-open-source">
-            <div class="container yeo-body">
-                <div class="columns">
-                    <div class="column col-10 centered col-sm-12">
-                        <h1 class="open-source-feature">Learn from our Threat Intel Blog 
-                        </h1>
-                        <a href="KnowledeBase.html" class="btn btn-lg btn-open-source">Get Access</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--
+        </div> --> 
         <div class="yeo-do" id="info">
             <div class="container yeo-body">
                 <div class="columns">
-                    <div class="column col-6 col-sm-12">
-                        <div class="yeo-do-content">
-                            <h3>Why choose us?</h3>
-                            <p></p>
-                            <p>✔️ Our team is comprised of experienced vets from the cybersecurity industry</p>
-                            <p>✔️ Strong commitment to customer satisfaction</p>
-                            <p>✔️ We utilize the latest breakthroughs in security tools to provide the highest level of protection</p>
-                            <p>✔️ We tailor our services to the needs of each individual customer</p>
-                            <p>✔️ Based in the USA, serving customers globally</p>
-                            <p>✔️ Competitive pricing</p>
-                            <a href="contact.html">Learn more<span class="blink">_</span></a>
+                    <div class="column col-6 col-sm-12" style="margin-bottom: 40px;">
+                        <div class="w3-card-4" style="width: 500px;">
+                            <h3  style="margin-left: 10px;">Essential Guide to Vulnerability Management</h3>
+                            <a href="ValueInCompliance.html" target="_blank">
+                            <p style="margin-left: 10px;">September 12, 2024 • Cybersecurity</p>
+                            <p style="margin-left: 10px;">How to minimize vulnerable systems</p>
+                            <img src="images/vulnerability-management.jpeg" alt="Alps" style="width: 200px;">
+                            <div class="w3-container w3-center">
+                                <a href="Cloud-Security-2024.html">Read<span class="blink">_</span></a>
+                            </div>
                         </div>
                     </div>
-                    <div class="column col-6 col-sm-12">
-                        <div class="yeo-do-content">
-                            <h3>What do we offer?</h3>
-                            <p></p>
-                            <p>✔️ Endpoint protection and management</p>
-                            <p>✔️ 24x7 security operations center</p>                            
-                            <p>✔️ General security consulting - vCISO services</p>
-                            <p>✔️ Cyber security gap analysis <p>
-                            <p>✔️ Cloud security reviews</p>
-                            <p>✔️ External Attack Surface Management (EASM)</p>
-                            <p>✔️ Compliance and standards auditing - SOC2, ISO27001, PCIDSS</p>
-                            <p>✔️ Penetration testing and reporting</p>
-                            <a href="contact.html">Learn more<span class="blink">_</span></a>
+                    <div class="column col-6 col-sm-12" style="margin-bottom: 40px;">
+                        <div class="w3-card-4" style="width: 500px;">
+                            <h3  style="margin-left: 10px;">Mastering Cloud Security in 2024</h3>
+                            <a href="Cloud-Security-2024.html" target="_blank">
+                            <p style="margin-left: 10px;">August 20, 2024 • Cybersecurity</p>
+                            <p style="margin-left: 10px;">Cloud security guide</p>
+                            <img src="images/vulnerability-management.jpeg" alt="Alps" style="width: 200px;">
+                            <div class="w3-container w3-center">
+                                <a href="Cloud-Security-2024.html">Read<span class="blink">_</span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column col-6 col-sm-12" style="margin-bottom: 40px;">
+                        <div class="w3-card-4" style="width: 500px;">
+                            <h3  style="margin-left: 10px;">Mastering Cloud Security in 2024</h3>
+                            <a href="Cloud-Security-2024.html" target="_blank">
+                            <p style="margin-left: 10px;">August 20, 2024 • Cybersecurity</p>
+                            <p style="margin-left: 10px;">Cloud security guide</p>
+                            <img src="images/vulnerability-management.jpeg" alt="Alps" style="width: 200px;">
+                            <div class="w3-container w3-center">
+                                <a href="Cloud-Security-2024.html">Read<span class="blink">_</span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column col-6 col-sm-12" style="margin-bottom: 40px;">
+                        <div class="w3-card-4" style="width: 500px;">
+                            <h3  style="margin-left: 10px;">Mastering Cloud Security in 2024</h3>
+                            <a href="Cloud-Security-2024.html" target="_blank">
+                            <p style="margin-left: 10px;">August 20, 2024 • Cybersecurity</p>
+                            <p style="margin-left: 10px;">Cloud security guide</p>
+                            <img src="images/vulnerability-management.jpeg" alt="Alps" style="width: 200px;">
+                            <div class="w3-container w3-center">
+                                <a href="Cloud-Security-2024.html">Read<span class="blink">_</span></a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="yeo-price" id="price">
+
+        <!-- <div class="yeo-price" id="price">
             <div class="container yeo-body  col-sm-12">
                 <div class="columns">
                     <div class="column col-4 col-sm-12">
@@ -273,19 +274,6 @@
                 </div>
             </div>
         </div>
-        
-        <div class="yeo-work" id="we-work">
-            <div class="container yeo-body">
-                <div class="columns">
-                    <div class="column col-12 col-sm-12">
-                     <div class="column col-10 col-sm-12 centered">
-                        <h2 class="yeo-work-feature">
-                            Access our <span class="yeo-work-feature-bold"><a href="blog.html">knowledge base</a></span>
-                        </h2>
-                </div>
-            </div>
-        </div>  
-
         <div class="yeo-team" id="team">
             <div class="container yeo-body">
                 <div class="columns">
@@ -309,7 +297,7 @@
                     </div>
                 </div>
             </div>
-        </div> 
+        </div>
         <div class="yeo-open-source">
             <div class="container yeo-body">
                 <div class="columns">

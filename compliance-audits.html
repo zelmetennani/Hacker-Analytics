@@ -1,26 +1,41 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Compliance Audits</title>
+    <link rel="icon" type="image/x-icon" href="images/cloud-backup-svgrepo-com.svg">
     <link href="https://fonts.googleapis.com/css?family=Poppins:200,400,700" rel="stylesheet">
     <link rel="stylesheet" href="./css/spectre.css">
     <link rel="stylesheet" href="./css/spectre-icons.css">
     <link rel="stylesheet" href="./css/spectre-exp.css">
     <link rel="stylesheet" href="./css/yeo.css">
-  </head>
-  <body>
+</head>
+<body>
     <header>
-      <h1>Compliance Audits</h1>
-      <p>Discover our insights on compliance audits, including regulatory updates, audit processes, and industry standards.</p>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li>
+                    <a href="#">Services</a>
+                    <ul>
+                        <li><a href="/penetration-testing/">Penetration Testing</a></li>
+                        <li><a href="/compliance-audits/">Compliance Audits</a></li>
+                    </ul>
+                </li>
+                <!-- Add other links as needed -->
+            </ul>
+        </nav>
     </header>
     <main>
-      <h2>Articles</h2>
-      <ul>
-        {% for post in site.categories['compliance-audits'] %}
-          <li><a href="{{ post.url }}">{{ post.title }}</a></li>
-        {% endfor %}
-      </ul>
+        <section>
+            <h1>Compliance Audits</h1>
+            <p>Discover our insights on compliance audits, including regulatory updates, audit processes, and industry standards.</p>
+            <!-- Add more static content here as needed -->
+        </section>
     </main>
-  </body>
+    <footer>
+        <p>&copy; 2023 Hacker Analytics. All rights reserved.</p>
+    </footer>
+</body>
 </html> 

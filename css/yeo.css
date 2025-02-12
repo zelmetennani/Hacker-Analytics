@@ -511,3 +511,20 @@ background-image: linear-gradient(134deg, #0C0091 0%, #00A87E 100%);
     }
 
 }
+
+/* Dropdown menu styling */
+.menu {
+    background-color: #333; /* Dark background for contrast */
+    color: #fff; /* White text for visibility */
+}
+
+.menu a {
+    color: #fff; /* Ensure links are white */
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+}
+
+.menu a:hover {
+    background-color: #555; /* Slightly lighter background on hover */
+}

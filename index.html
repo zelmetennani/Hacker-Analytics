@@ -345,7 +345,7 @@
                     </div>
                     <div class="column col-6 col-sm-6">
                         <div class="yeo-footer-content">
-                            <h4>Hacker Analytics LLC 2024 ©</h4>
+                            <h4>Hacker Analytics LLC <span id="current-year"></span> ©</h4>
                             <ul class="nav">
                                 <!-- <li class="nav-item">
                                     <a href="">Terms and Conditions</a>
@@ -360,5 +360,10 @@
             </div>
         </div>
 </body>
+
+<script>
+    // Set the current year in the footer
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+</script>
 
 </html>

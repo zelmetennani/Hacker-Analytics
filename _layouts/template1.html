@@ -4,14 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>{{ page.title }}</title>
-    <meta name="description" content="Expert SOC 2 compliance services to help your organization achieve and maintain SOC 2 certification. Streamlined audits, gap analysis, and continuous compliance monitoring.">
-    <link rel="icon" type="image/x-icon" href="images/cloud-backup-svgrepo-com.svg">
-    <!-- Same CSS includes as main page -->
+    <meta name="description" content="{{ page.description | default: site.description }}">
+    <link rel="icon" type="image/x-icon" href="{{ site.baseurl }}/images/cloud-backup-svgrepo-com.svg">
     <link href="https://fonts.googleapis.com/css?family=Poppins:200,400,700" rel="stylesheet">
-    <link rel="stylesheet" href="./css/spectre.css">
-    <link rel="stylesheet" href="./css/spectre-icons.css">
-    <link rel="stylesheet" href="./css/spectre-exp.css">
-    <link rel="stylesheet" href="./css/yeo.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/css/spectre.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/css/spectre-icons.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/css/spectre-exp.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/css/yeo.css">
 </head>
 <body>
     <div class="yeo-slogan">
@@ -51,7 +50,6 @@
                     <div class="slogan-content">
                         <h1>{{ page.title }}</h1>
                         <h2>{{ page.subtitle }}</h2>
-                        <p>Status: {{ page.status }}</p>
                         {% if page.image %}
                             <img src="{{ page.image }}" alt="{{ page.title }}" class="img-responsive">
                         {% endif %}
@@ -84,7 +82,7 @@
         <div class="container yeo-body">
             <div class="columns">
                 <div class="column col-12">
-                    <h2>Why Choose SOC 2 Compliance?</h2>
+                    <h2>Take Aways</h2>
                     <div class="columns">
                         <div class="column col-4 col-sm-12">
                             <div class="card">

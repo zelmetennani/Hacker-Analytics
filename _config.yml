@@ -1,11 +1,11 @@
 # Site settings
-title: Hacker Analytics
+title: "Hacker Analytics"
 email: zack@hackeranalytics.com
 description: >- # this means to ignore newlines until "baseurl:"
   A blog about penetration testing and security assessments.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://yourusername.github.io" # the base hostname & protocol for your site
-github_username: yourusername
+url: "https://hackeranalytics.com" # the base hostname & protocol for your site
+github_username: zelmetennani
 
 # Build settings
 markdown: kramdown
@@ -13,8 +13,31 @@ theme: minima
 plugins:
   - jekyll-seo-tag
 
-# Permalinks
-permalink: /:year/:month/:day/:title/
+# Paths
+layouts_dir: _layouts
+includes_dir: _includes
+sass:
+  sass_dir: _sass
+  style: compressed
+
+# Default settings for posts
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "template1" # Ensure this matches your layout file
+      permalink: /:categories/:year/:month/:day/:title.html
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
 
 # Collections
 collections:

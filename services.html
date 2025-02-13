@@ -99,7 +99,8 @@
             color: #0C0091;
             font-size: 2.5rem;
             margin-bottom: 0.5rem;
-        }
+        
+            
 
         .service-card {
             background: #f8f9fa;
@@ -256,48 +257,51 @@
                             <svg id="security-scan" viewBox="0 0 200 200" width="80%" height="auto">
                                 <!-- Network Grid Background -->
                                 <g id="network-grid">
-                                    <path class="grid-line" d="M40 40h120v120H40z" fill="none" stroke="#0C0091" stroke-width="0.3" opacity="0.1"/>
-                                    <path class="grid-line" d="M70 40v120M100 40v120M130 40v120" fill="none" stroke="#0C0091" stroke-width="0.3" opacity="0.1"/>
-                                    <path class="grid-line" d="M40 70h120M40 100h120M40 130h120" fill="none" stroke="#0C0091" stroke-width="0.3" opacity="0.1"/>
+                                    <path class="grid-line" d="M20 20h160v160H20z" fill="none" stroke="#0C0091" stroke-width="0.2" opacity="0.1"/>
                                 </g>
 
-                                <!-- Multiple Scanning Circles -->
-                                <circle class="scan-circle" cx="100" cy="100" r="55" fill="none" stroke="#00A87E" stroke-width="1" stroke-dasharray="346" stroke-dashoffset="346"/>
-                                <circle class="scan-circle-reverse" cx="100" cy="100" r="45" fill="none" stroke="#00ffd4" stroke-width="0.5" stroke-dasharray="283" stroke-dashoffset="283"/>
-                                <circle class="scan-circle" cx="100" cy="100" r="35" fill="none" stroke="#00A87E" stroke-width="1" stroke-dasharray="220" stroke-dashoffset="220"/>
+                                <!-- Network Lines (Lock Shape) -->
+                                <g id="network-lines">
+                                    <!-- Lock body outline -->
+                                    <path class="network-line" d="M70,80 L130,80 L130,140 L70,140 L70,80" stroke="#00ffd4" stroke-width="0.5" opacity="0.3"/>
+                                    <!-- Lock shackle -->
+                                    <path class="network-line" d="M85,80 L85,60 Q100,40 115,60 L115,80" stroke="#00ffd4" stroke-width="0.5" opacity="0.3"/>
+                                    <!-- Internal connections -->
+                                    <path class="network-line" d="M70,110 L130,110" stroke="#00ffd4" stroke-width="0.5" opacity="0.3"/>
+                                    <path class="network-line" d="M100,80 L100,140" stroke="#00ffd4" stroke-width="0.5" opacity="0.3"/>
+                                </g>
 
-                                <!-- Network Nodes -->
+                                <!-- Network Nodes (Lock Shape) -->
                                 <g id="network-nodes">
-                                    <circle class="node" cx="70" cy="70" r="3" fill="#0C0091"/>
-                                    <circle class="node" cx="130" cy="70" r="3" fill="#0C0091"/>
-                                    <circle class="node" cx="100" cy="100" r="4" fill="#00A87E"/>
-                                    <circle class="node" cx="70" cy="130" r="3" fill="#0C0091"/>
-                                    <circle class="node" cx="130" cy="130" r="3" fill="#0C0091"/>
-                                    <!-- Additional nodes -->
-                                    <circle class="node small" cx="85" cy="85" r="2" fill="#00ffd4"/>
-                                    <circle class="node small" cx="115" cy="85" r="2" fill="#00ffd4"/>
-                                    <circle class="node small" cx="85" cy="115" r="2" fill="#00ffd4"/>
-                                    <circle class="node small" cx="115" cy="115" r="2" fill="#00ffd4"/>
+                                    <!-- Lock body corners -->
+                                    <circle class="node n1" cx="70" cy="80" r="3" fill="#0C0091"/>
+                                    <circle class="node n2" cx="130" cy="80" r="3" fill="#0C0091"/>
+                                    <circle class="node n3" cx="130" cy="140" r="3" fill="#0C0091"/>
+                                    <circle class="node n4" cx="70" cy="140" r="3" fill="#0C0091"/>
+                                    
+                                    <!-- Lock shackle nodes -->
+                                    <circle class="node n5" cx="85" cy="60" r="3" fill="#0C0091"/>
+                                    <circle class="node n6" cx="100" cy="45" r="3" fill="#0C0091"/>
+                                    <circle class="node n7" cx="115" cy="60" r="3" fill="#0C0091"/>
+                                    
+                                    <!-- Center nodes -->
+                                    <circle class="node center" cx="100" cy="110" r="4" fill="#00A87E"/>
+                                    
+                                    <!-- Inner nodes -->
+                                    <circle class="node inner n8" cx="85" cy="95" r="2" fill="#00ffd4"/>
+                                    <circle class="node inner n9" cx="115" cy="95" r="2" fill="#00ffd4"/>
+                                    <circle class="node inner n10" cx="85" cy="125" r="2" fill="#00ffd4"/>
+                                    <circle class="node inner n11" cx="115" cy="125" r="2" fill="#00ffd4"/>
+                                    <circle class="node inner n12" cx="100" cy="95" r="2" fill="#00ffd4"/>
+                                    <circle class="node inner n13" cx="100" cy="125" r="2" fill="#00ffd4"/>
                                 </g>
 
-                                <!-- Connection Lines -->
-                                <g id="connections">
-                                    <path class="connection" d="M70 70L100 100M130 70L100 100M70 130L100 100M130 130L100 100" 
-                                          stroke="#00ffd4" stroke-width="0.5" opacity="0.4"/>
-                                    <!-- Additional connections -->
-                                    <path class="connection-alt" d="M85 85L115 85M85 115L115 115M85 85L85 115M115 85L115 115" 
-                                          stroke="#00A87E" stroke-width="0.3" opacity="0.3"/>
-                                </g>
-
-                                <!-- Scanning Particles -->
-                                <g id="scan-particles">
-                                    <circle class="scan-particle" r="1.5" fill="#00ffd4"/>
-                                    <circle class="scan-particle" r="1.5" fill="#00ffd4"/>
-                                    <circle class="scan-particle" r="1.5" fill="#00ffd4"/>
-                                    <circle class="scan-particle" r="1.5" fill="#00ffd4"/>
-                                    <circle class="scan-particle" r="1" fill="#00A87E"/>
-                                    <circle class="scan-particle" r="1" fill="#00A87E"/>
-                                    <circle class="scan-particle" r="1" fill="#00A87E"/>
+                                <!-- Data Pulses -->
+                                <g id="data-pulses">
+                                    <circle class="pulse" r="2" fill="#00ffd4"/>
+                                    <circle class="pulse" r="2" fill="#00ffd4"/>
+                                    <circle class="pulse" r="2" fill="#00ffd4"/>
+                                    <circle class="pulse" r="2" fill="#00ffd4"/>
                                 </g>
                             </svg>
                         </div>
@@ -306,119 +310,142 @@
             </div>
         </div>
     </div>
+    
+    
 
     <div class="content-section">
         <div class="container yeo-body">
-            <h2 class="section-title">Why Choose Hacker Analytics?</h2>
-            <p class="section-subtitle">Elevating Your Security Posture with Expert Solutions</p>
+            <h2 class="section-title">Penetration Testing Services</h2>
+            <p class="section-subtitle">Expert security assessments across your entire infrastructure</p>
             
-            <div class="stats-grid">
-                <div class="stat-item">
-                    <div class="icon-wrapper">
-                        <i class="fas fa-user-shield icon-feature"></i>
+            <div class="service-types-grid">
+                <div class="service-type">
+                    <i class="fas fa-cloud icon-feature"></i>
+                    <h3>Cloud Security Testing</h3>
+                    <p>Comprehensive assessment of cloud infrastructure and services</p>
+                    <ul>
+                        <li><i class="fas fa-check"></i> AWS, Azure & GCP Security Reviews</li>
+                        <li><i class="fas fa-check"></i> Kubernetes & Container Security</li>
+                        <li><i class="fas fa-check"></i> Serverless Application Testing</li>
+                        <li><i class="fas fa-check"></i> Cloud Configuration Analysis</li>
+                    </ul>
+                </div>
+
+                <div class="service-type">
+                    <i class="fas fa-globe icon-feature"></i>
+                    <h3>Application Security</h3>
+                    <p>In-depth testing of web and mobile applications</p>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Web Application Penetration Testing</li>
+                        <li><i class="fas fa-check"></i> API Security Assessment</li>
+                        <li><i class="fas fa-check"></i> Mobile App Security Testing</li>
+                        <li><i class="fas fa-check"></i> Source Code Security Review</li>
+                    </ul>
+                </div>
+
+                <div class="service-type">
+                    <i class="fas fa-network-wired icon-feature"></i>
+                    <h3>Network Security</h3>
+                    <p>External and internal network security assessment</p>
+                    <ul>
+                        <li><i class="fas fa-check"></i> External Network Testing</li>
+                        <li><i class="fas fa-check"></i> Internal Infrastructure Review</li>
+                        <li><i class="fas fa-check"></i> Wireless Network Security</li>
+                        <li><i class="fas fa-check"></i> Network Architecture Analysis</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="service-info-box">
+                <h3>Why Penetration Testing Matters</h3>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <h4>Importance</h4>
+                        <p>Identify critical vulnerabilities before attackers do. Protect your assets, data, and reputation through proactive security testing.</p>
                     </div>
-                    <div class="stat-content">
-                        <h3>100% Manual Testing</h3>
-                        <p>No generic scans, only deep-dive assessments</p>
+                    <div class="info-item">
+                        <h4>Compliance Requirements</h4>
+                        <p>Meet security requirements for SOC 2, ISO 27001, HIPAA, and other frameworks with our compliance-ready reports.</p>
+                    </div>
+                    <div class="info-item">
+                        <h4>Pricing Structure</h4>
+                        <p>Starting at $15,000 for comprehensive assessments. Final pricing based on scope, complexity, and timeline requirements.</p>
+                    </div>
+                    <div class="info-item">
+                        <h4>Next Steps</h4>
+                        <p>Contact us for a free consultation to discuss your specific needs and receive a custom testing proposal.</p>
                     </div>
                 </div>
-                <div class="stat-item">
-                    <div class="icon-wrapper">
-                        <i class="fas fa-search icon-feature"></i>
-                    </div>
-                    <div class="stat-content">
-                        <h3>80%+ Success Rate</h3>
-                        <p>of Pentests Uncover Critical Vulnerabilities – We find what automated tools miss</p>
-                    </div>
-                </div>
-                <div class="stat-item">
-                    <div class="icon-wrapper">
+            </div>
+        </div>
+    </div>
+
+    <!-- Compliance Services Section -->
+    <div class="content-section compliance-section">
+        <div class="container yeo-body">
+            <h2 class="section-title">Compliance & Audit Services</h2>
+            <p class="section-subtitle">Expert guidance through complex compliance requirements</p>
+
+            <div class="compliance-standards-grid">
+                <div class="compliance-standard">
+                    <div class="standard-header">
                         <i class="fas fa-certificate icon-feature"></i>
+                        <h3>SOC 2</h3>
                     </div>
-                    <div class="stat-content">
-                        <h3>Compliance Ready</h3>
-                        <p>SOC 2, ISO 27001, HIPAA-Ready Reports – Compliance without the headache</p>
-                    </div>
+                    <p>System and Organization Controls for Service Organizations</p>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Type I & II Assessments</li>
+                        <li><i class="fas fa-check"></i> Readiness Assessments</li>
+                        <li><i class="fas fa-check"></i> Control Implementation</li>
+                        <li><i class="fas fa-check"></i> Continuous Monitoring</li>
+                    </ul>
                 </div>
-                <div class="stat-item">
-                    <div class="icon-wrapper">
-                        <i class="fas fa-cloud icon-feature"></i>
+
+                <div class="compliance-standard">
+                    <div class="standard-header">
+                        <i class="fas fa-shield-alt icon-feature"></i>
+                        <h3>ISO 27001</h3>
                     </div>
-                    <div class="stat-content">
-                        <h3>Cloud Specialists</h3>
-                        <p>Cloud, SaaS, and Enterprise Specialists – Securing modern businesses like yours</p>
+                    <p>International Standard for Information Security</p>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Gap Analysis</li>
+                        <li><i class="fas fa-check"></i> ISMS Implementation</li>
+                        <li><i class="fas fa-check"></i> Risk Assessment</li>
+                        <li><i class="fas fa-check"></i> Certification Support</li>
+                    </ul>
+                </div>
+
+                <div class="compliance-standard">
+                    <div class="standard-header">
+                        <i class="fas fa-hospital icon-feature"></i>
+                        <h3>HIPAA</h3>
                     </div>
+                    <p>Healthcare Information Privacy & Security</p>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Security Assessment</li>
+                        <li><i class="fas fa-check"></i> Policy Development</li>
+                        <li><i class="fas fa-check"></i> Training Programs</li>
+                        <li><i class="fas fa-check"></i> Compliance Monitoring</li>
+                    </ul>
+                </div>
+
+                <div class="compliance-standard">
+                    <div class="standard-header">
+                        <i class="fas fa-credit-card icon-feature"></i>
+                        <h3>PCI DSS</h3>
+                    </div>
+                    <p>Payment Card Industry Data Security Standard</p>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Gap Analysis</li>
+                        <li><i class="fas fa-check"></i> ASV Scanning</li>
+                        <li><i class="fas fa-check"></i> SAQ Assistance</li>
+                        <li><i class="fas fa-check"></i> ROC Preparation</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </div>
-
-    <div class="content-section">
-        <div class="container yeo-body">
-            <h2 class="section-title">Our Core Services</h2>
-            <p class="section-subtitle">Security Solutions for Modern Organizations</p>
-            
-            <div class="columns">
-                <div class="column col-6 col-sm-12">
-                    <div class="service-card">
-                        <i class="fas fa-laptop-code icon-feature"></i>
-                        <h3>Penetration Testing</h3>
-                        <ul>
-                            <li><i class="fas fa-check"></i> Advanced External & Internal Testing</li>
-                            <li><i class="fas fa-check"></i> Cloud Infrastructure Assessment</li>
-                            <li><i class="fas fa-check"></i> Web Application Security</li>
-                            <li><i class="fas fa-check"></i> Network Vulnerability Analysis</li>
-                        </ul>
-                        <a href="/services/penetration-testing.html" class="btn btn-link">Explore Testing Services →</a>
-                    </div>
-                </div>
-                <div class="column col-6 col-sm-12">
-                    <div class="service-card">
-                        <i class="fas fa-clipboard-check icon-feature"></i>
-                        <h3>Compliance & Risk</h3>
-                        <ul>
-                            <li><i class="fas fa-check"></i> SOC 2 & ISO 27001 Certification</li>
-                            <li><i class="fas fa-check"></i> HIPAA & PCI DSS Compliance</li>
-                            <li><i class="fas fa-check"></i> Vendor Risk Assessment</li>
-                            <li><i class="fas fa-check"></i> Security Gap Assessment</li>
-                        </ul>
-                        <a href="/services/compliance-audits.html" class="btn btn-link">View Compliance Solutions →</a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="text-center">
-                <a href="/services" class="btn btn-primary">See All Services →</a>
-            </div>
-        </div>
-    </div>
-
-    <!-- Enhanced Testimonials Section -->
-    <div class="content-section testimonials-section">
-        <div class="container yeo-body">
-            <div class="testimonial-wrapper">
-                <div class="testimonial-bg"></div>
-                <h2 class="section-title">What Our Clients Say</h2>
-                
-                <blockquote class="testimonial animated-border">
-                    <div class="quote-icon">
-                        <i class="fas fa-quote-left"></i>
-                    </div>
-                    <p class="quote-text">Hacker Analytics saved us from a critical vulnerability before it became a crisis.</p>
-                    <div class="client-info">
-                        <div class="client-avatar">
-                            <i class="fas fa-user-shield"></i>
-                        </div>
-                        <div class="client-details">
-                            <cite>Senior Security Director</cite>
-                            <span class="company">Leading SaaS Company</span>
-                        </div>
-                    </div>
-                </blockquote>
-            </div>
-        </div>
-    </div>
-
+    
     <!-- Enhanced CTA Section -->
     <div class="content-section cta-section">
         <div class="container yeo-body">

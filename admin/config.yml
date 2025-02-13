@@ -17,7 +17,10 @@ collections:
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Date", name: "date", widget: "datetime" }
-      - { label: "Categories", name: "categories", widget: "list", default: ["general"] }
-      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Subtitle", name: "subtitle", widget: "string" }
+      - { label: "Status", name: "status", widget: "string" }
       - { label: "Image", name: "image", widget: "image" }
+      - { label: "3 Key Insights", name: "insights", widget: "list", field: { label: "Insight", name: "insight", widget: "string" } }
+      - { label: "Article Text", name: "article_text", widget: "markdown" }
+      - { label: "CTA Text", name: "cta.text", widget: "string" }
+      - { label: "CTA URL", name: "cta.url", widget: "string" }

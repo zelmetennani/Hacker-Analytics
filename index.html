@@ -211,6 +211,8 @@
             }
         }
     </style>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
 </head>
 
 <body>
@@ -244,16 +246,72 @@
         <div class="hero-section">
             <div class="container slogan">
                 <div class="columns">
-                    <div class="column col-12 col-sm-12">
+                    <div class="column col-7 col-sm-12">
                         <div class="slogan-content">
                             <h1>
-                                <span class="slogan-bold">Trusted by Companies Worldwide<span class="blink">_</span></span>
+                                <span class="slogan-bold">Your security, our mission<span class="blink">_</span></span>
                             </h1>
-                            <p>"Your security, our mission. Elite penetration testing and compliance solutions for modern businesses."</p>
+                            <p>Elite penetration testing and compliance solutions for modern businesses."</p>
                             <div class="cta-buttons">
                                 <a class="btn btn-primary btn-lg btn-start hide-sm" href="contact.html">Get a Free Security Consultation</a>
                                 <a class="btn btn-link btn-lg hide-sm" href="#services">Explore Our Services</a>
                             </div>
+                        </div>
+                    </div>
+                    <div class="column col-5 col-sm-12">
+                        <div class="security-animation">
+                            <svg id="security-icon" viewBox="0 0 200 200" width="100%" height="auto">
+                                <!-- Lock shackle (the arc) -->
+                                <path id="lock-body" class="lock-path" 
+                                    d="M70 80v-25c0-16.6 13.4-30 30-30s30 13.4 30 30v25" 
+                                    fill="none" 
+                                    stroke="#fff" 
+                                    stroke-width="6"
+                                    stroke-linecap="round"
+                                />
+                                
+                                <!-- Lock body -->
+                                <path id="lock-base" 
+                                    d="M50 80h100v70c0 5.5-4.5 10-10 10H60c-5.5 0-10-4.5-10-10V80z" 
+                                    fill="#fff"
+                                />
+                                
+                                <!-- Keyhole -->
+                                <circle cx="100" cy="105" r="8" fill="#0C0091"/>
+                                <rect x="97" y="105" width="6" height="25" fill="#0C0091"/>
+                                
+                                <!-- 30 orbiting particles -->
+                                <circle class="particle" r="1.5" fill="#00ffd4"/>
+                                <circle class="particle" r="2" fill="#00ffd4"/>
+                                <circle class="particle" r="1" fill="#00ffd4"/>
+                                <circle class="particle" r="1.5" fill="#fff"/>
+                                <circle class="particle" r="1" fill="#fff"/>
+                                <circle class="particle" r="2" fill="#fff"/>
+                                <circle class="particle" r="1.5" fill="#00A87E"/>
+                                <circle class="particle" r="1" fill="#00A87E"/>
+                                <circle class="particle" r="2" fill="#00A87E"/>
+                                <circle class="particle" r="1.5" fill="#00ffd4"/>
+                                <circle class="particle" r="1" fill="#00ffd4"/>
+                                <circle class="particle" r="2" fill="#00ffd4"/>
+                                <circle class="particle" r="1" fill="#fff"/>
+                                <circle class="particle" r="1.5" fill="#fff"/>
+                                <circle class="particle" r="2" fill="#fff"/>
+                                <circle class="particle" r="1.5" fill="#00A87E"/>
+                                <circle class="particle" r="2" fill="#00A87E"/>
+                                <circle class="particle" r="1" fill="#00A87E"/>
+                                <circle class="particle" r="1.5" fill="#00ffd4"/>
+                                <circle class="particle" r="1" fill="#00ffd4"/>
+                                <circle class="particle" r="2" fill="#00ffd4"/>
+                                <circle class="particle" r="1.5" fill="#fff"/>
+                                <circle class="particle" r="1" fill="#fff"/>
+                                <circle class="particle" r="2" fill="#fff"/>
+                                <circle class="particle" r="1" fill="#00A87E"/>
+                                <circle class="particle" r="1.5" fill="#00A87E"/>
+                                <circle class="particle" r="2" fill="#00A87E"/>
+                                <circle class="particle" r="1.5" fill="#00ffd4"/>
+                                <circle class="particle" r="1" fill="#00ffd4"/>
+                                <circle class="particle" r="2" fill="#00ffd4"/>
+                            </svg>
                         </div>
                     </div>
                 </div>
@@ -269,24 +327,40 @@
             
             <div class="stats-grid">
                 <div class="stat-item">
-                    <i class="fas fa-shield-alt icon-feature"></i>
-                    <h3>2000+</h3>
-                    <p>Security Assessments</p>
+                    <div class="icon-wrapper">
+                        <i class="fas fa-user-shield icon-feature"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3>100% Manual Testing</h3>
+                        <p>No generic scans, only deep-dive assessments</p>
+                    </div>
                 </div>
                 <div class="stat-item">
-                    <i class="fas fa-chart-line icon-feature"></i>
-                    <h3>98%</h3>
-                    <p>Client Retention</p>
+                    <div class="icon-wrapper">
+                        <i class="fas fa-search icon-feature"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3>80%+ Success Rate</h3>
+                        <p>of Pentests Uncover Critical Vulnerabilities – We find what automated tools miss</p>
+                    </div>
                 </div>
                 <div class="stat-item">
-                    <i class="fas fa-check-circle icon-feature"></i>
-                    <h3>50+</h3>
-                    <p>Compliance Frameworks</p>
+                    <div class="icon-wrapper">
+                        <i class="fas fa-certificate icon-feature"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3>Compliance Ready</h3>
+                        <p>SOC 2, ISO 27001, HIPAA-Ready Reports – Compliance without the headache</p>
+                    </div>
                 </div>
                 <div class="stat-item">
-                    <i class="fas fa-globe icon-feature"></i>
-                    <h3>15+</h3>
-                    <p>Countries Served</p>
+                    <div class="icon-wrapper">
+                        <i class="fas fa-cloud icon-feature"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3>Cloud Specialists</h3>
+                        <p>Cloud, SaaS, and Enterprise Specialists – Securing modern businesses like yours</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -332,50 +406,47 @@
         </div>
     </div>
 
-    <div class="content-section">
+    <!-- Enhanced Testimonials Section -->
+    <div class="content-section testimonials-section">
         <div class="container yeo-body">
-            <div class="columns">
-                <div class="column col-12">
-                    <h2>Real-World Security Insights</h2>
-                    <p>Stay ahead with expert cybersecurity insights.</p>
-                    
-                    <div class="blog-preview">
-                        <h3>SOC 2 Penetration Testing: What You Need to Know in 2025</h3>
-                        <a href="/blog/soc2-pentesting-2025" class="btn btn-link">Read More →</a>
+            <div class="testimonial-wrapper">
+                <div class="testimonial-bg"></div>
+                <h2 class="section-title">What Our Clients Say</h2>
+                
+                <blockquote class="testimonial animated-border">
+                    <div class="quote-icon">
+                        <i class="fas fa-quote-left"></i>
                     </div>
-                </div>
+                    <p class="quote-text">Hacker Analytics saved us from a critical vulnerability before it became a crisis.</p>
+                    <div class="client-info">
+                        <div class="client-avatar">
+                            <i class="fas fa-user-shield"></i>
+                        </div>
+                        <div class="client-details">
+                            <cite>Senior Security Director</cite>
+                            <span class="company">Leading SaaS Company</span>
+                        </div>
+                    </div>
+                </blockquote>
             </div>
         </div>
     </div>
 
-    <div class="content-section">
+    <!-- Enhanced CTA Section -->
+    <div class="content-section cta-section">
         <div class="container yeo-body">
-            <h2>Client Testimonials & Case Studies</h2>
-            
-            <blockquote class="testimonial">
-                "Hacker Analytics saved us from a critical vulnerability before it became a crisis."
-                <cite>- Senior Security Director, Leading SaaS Company</cite>
-            </blockquote>
-            
-            <div class="case-study-preview">
-                <h3>Case Study Highlight</h3>
-                <p>How We Helped a SaaS Company Achieve SOC 2 Compliance</p>
-                <a href="/case-studies/saas-soc2" class="btn btn-link">Read Case Study →</a>
-            </div>
-        </div>
-    </div>
-
-    <div class="content-section">
-        <div class="container yeo-body">
-            <div class="columns">
-                <div class="column col-10 centered col-sm-12">
-                    <h2>Ready to Secure Your Business?</h2>
-                    <p>Take the first step toward elite cybersecurity protection.</p>
-                    <div class="cta-buttons">
-                        <a href="contact.html" class="btn btn-lg btn-primary">Schedule a Free Consultation →</a>
-                        <a href="contact.html" class="btn btn-lg btn-link">Talk to an Expert →</a>
+            <div class="cta-wrapper">
+                <div class="cta-content">
+                    <h2 class="gradient-heading">Ready to Secure Your Business?</h2>
+                    <p class="cta-subtitle">Take the first step toward elite cybersecurity protection</p>
+                    <div class="cta-button-wrapper">
+                        <a href="contact.html" class="btn btn-lg btn-glow">
+                            <span class="btn-text">Talk to an Expert</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
                     </div>
                 </div>
+                <div class="cta-particles"></div>
             </div>
         </div>
     </div>
@@ -419,6 +490,98 @@
     <script>
         // Set the current year in the footer
         document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+
+    <script>
+        // Animate the particles in an asteroid field pattern
+        const particles = document.querySelectorAll('.particle');
+        particles.forEach((particle, index) => {
+            const randomRadius = 40 + Math.random() * 50; // Random orbit radius between 40 and 90
+            const randomSpeed = 3000 + Math.random() * 5000; // Random speed between 3-8s per rotation
+            const startAngle = (index * (360 / particles.length) + Math.random() * 30) * (Math.PI / 180); // Distribute with some randomness
+            
+            anime({
+                targets: particle,
+                loop: true,
+                duration: randomSpeed,
+                cx: [
+                    { 
+                        value: function() {
+                            return 100 + randomRadius * Math.cos(startAngle);
+                        }
+                    },
+                    {
+                        value: function() {
+                            return 100 + randomRadius * Math.cos(startAngle + 2 * Math.PI);
+                        }
+                    }
+                ],
+                cy: [
+                    {
+                        value: function() {
+                            return 120 + randomRadius * Math.sin(startAngle);
+                        }
+                    },
+                    {
+                        value: function() {
+                            return 120 + randomRadius * Math.sin(startAngle + 2 * Math.PI);
+                        }
+                    }
+                ],
+                easing: 'linear',
+                scale: [
+                    { value: [0.5, 1.2], duration: randomSpeed/2, easing: 'easeOutSine' },
+                    { value: 0.5, duration: randomSpeed/2, easing: 'easeInSine' }
+                ],
+                opacity: [
+                    { value: [0.3, 0.8], duration: randomSpeed/2 },
+                    { value: 0.3, duration: randomSpeed/2 }
+                ]
+            });
+        });
+
+        // Add gentle bounce to the lock
+        anime({
+            targets: '#lock-base',
+            translateY: ['2px', '-2px'],
+            direction: 'alternate',
+            loop: true,
+            duration: 1500,
+            easing: 'easeInOutQuad'
+        });
+
+        // Gentle pulse for the lock outline
+        anime({
+            targets: '#lock-body',
+            strokeWidth: [4, 5],
+            direction: 'alternate',
+            loop: true,
+            duration: 1500,
+            easing: 'easeInOutQuad'
+        });
+    </script>
+
+    <script>
+        // Add after your existing scripts
+        let lastScrollTop = 0;
+        const header = document.querySelector('.yeo-header');
+        const scrollThreshold = 100; // Minimum scroll before hiding header
+
+        window.addEventListener('scroll', () => {
+            if (window.innerWidth <= 768) {  // Only on mobile
+                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                
+                if (scrollTop > lastScrollTop && scrollTop > scrollThreshold) {
+                    // Scrolling down & past threshold
+                    header.classList.add('header-hidden');
+                } else {
+                    // Scrolling up or at top
+                    header.classList.remove('header-hidden');
+                }
+                
+                lastScrollTop = scrollTop;
+            }
+        });
     </script>
 </body>
 </html>

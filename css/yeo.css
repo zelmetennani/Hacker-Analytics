@@ -512,19 +512,217 @@ background-image: linear-gradient(134deg, #0C0091 0%, #00A87E 100%);
 
 }
 
-/* Dropdown menu styling */
+/* Update the Dropdown menu styling */
 .menu {
-    background-color: #333; /* Dark background for contrast */
-    color: #fff; /* White text for visibility */
+    background-color: #333;
+    color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    border-radius: 4px;
+    margin-top: 0.5rem;
 }
 
 .menu a {
-    color: #fff; /* Ensure links are white */
+    color: #fff;
     text-decoration: none;
     padding: 10px 15px;
     display: block;
+    transition: background-color 0.2s ease;
 }
 
 .menu a:hover {
-    background-color: #555; /* Slightly lighter background on hover */
+    background-color: #555;
+    color: #fff;
+}
+
+/* Ensure dropdown toggle in header remains white */
+.yeo-header .navbar-section .btn-link,
+.yeo-header .navbar-brand.logo {
+    color: #fff;
+}
+
+/* Add a subtle arrow for the dropdown */
+.dropdown-toggle::after {
+    border-color: #fff transparent transparent transparent;
+}
+
+/* Header and Hero styles */
+.container.yeo-header {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+}
+
+.yeo-header .navbar {
+    padding: 1rem 0;
+}
+
+.yeo-header {
+    color: #fff;
+    padding: 1rem 0;
+    background: transparent;
+}
+
+.header-hero-wrapper {
+    background-image: -webkit-linear-gradient(44deg, #0C0091 0%, #00A87E 100%);
+    background-image: -o-linear-gradient(44deg, #0C0091 0%, #00A87E 100%);
+    background-image: linear-gradient(134deg, #0C0091 0%, #00A87E 100%);
+    color: #fff;
+}
+
+.hero-section {
+    color: #fff;
+    padding-bottom: 4rem;
+    background: transparent;
+}
+
+/* Navigation styles */
+.yeo-header .navbar-section .btn-link,
+.yeo-header .navbar-brand.logo {
+    color: #fff;
+}
+
+/* Content sections */
+.content-section {
+    background: #fff;
+    color: #2E2E2E;
+    padding: 4rem 0;
+}
+
+/* Cards and Features */
+.tool-card {
+    text-align: center;
+    padding: 2rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    height: 100%;
+    transition: transform 0.3s ease;
+}
+
+.tool-card:hover {
+    transform: translateY(-5px);
+}
+
+.tool-card h4 {
+    color: #0C0091;
+    margin: 1rem 0;
+}
+
+.tool-card p {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 0;
+}
+
+/* Stats Grid */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.stat-item {
+    text-align: center;
+    padding: 2rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.stat-item:hover {
+    transform: translateY(-5px);
+}
+
+.stat-item h3 {
+    color: #0C0091;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Service Cards */
+.service-card {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    background: #f8f9fa;
+    padding: 2rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: #0C0091;
+}
+
+.service-card h3 {
+    color: #0C0091;
+}
+
+/* Section Titles */
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #0C0091;
+}
+
+.section-subtitle {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+    color: #666;
+}
+
+/* Icons */
+.icon-feature {
+    font-size: 2.5rem;
+    color: #0C0091;
+    margin-bottom: 1rem;
+}
+
+/* Links */
+.btn-link {
+    color: #0C0091 !important;
+}
+
+.btn-link:hover {
+    color: #00A87E !important;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .tool-card {
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Update dropdown toggle text color */
+.dropdown .btn-link.dropdown-toggle {
+    color: #fff !important;
+}
+
+.dropdown .btn-link.dropdown-toggle:hover {
+    color: #fff !important;
 }

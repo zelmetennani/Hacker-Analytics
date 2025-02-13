@@ -36,20 +36,60 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <style>
-        .hero-section {
+        /* Update header container styles */
+        .container.yeo-header {
+            max-width: 1080px;  /* Slightly smaller than the main container */
+            margin: 0 auto;
+            padding: 1rem 2rem;  /* Add horizontal padding */
+        }
+
+        /* Adjust navbar padding */
+        .yeo-header .navbar {
+            padding: 1rem 0;
+        }
+
+        /* Remove individual background styles */
+        .yeo-header {
+            color: #fff;
+            padding: 1rem 0;
+            background: transparent; /* Remove individual background */
+        }
+
+        /* Create a wrapper for both header and hero */
+        .header-hero-wrapper {
             background-image: -webkit-linear-gradient(44deg, #0C0091 0%, #00A87E 100%);
             background-image: -o-linear-gradient(44deg, #0C0091 0%, #00A87E 100%);
             background-image: linear-gradient(134deg, #0C0091 0%, #00A87E 100%);
             color: #fff;
+        }
+
+        .hero-section {
+            color: #fff;
             padding-bottom: 4rem;
+            background: transparent; /* Remove individual background */
         }
 
-        .hero-section .btn-link {
+        /* Keep header navigation white */
+        .yeo-header .navbar-section .btn-link,
+        .yeo-header .navbar-brand.logo {
             color: #fff;
         }
 
-        .hero-section .navbar-section .btn-link {
+        /* Keep dropdown menu styling */
+        .menu {
+            background-color: #333;
             color: #fff;
+        }
+
+        .menu a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 15px;
+            display: block;
+        }
+
+        .menu a:hover {
+            background-color: #555;
         }
 
         .content-section {
@@ -174,49 +214,51 @@
 </head>
 
 <body>
-    <div class="container yeo-header">
-        <div class="columns">
-            <div class="column col-12">
-                <header class="navbar">
-                    <section class="navbar-section">
-                        <a class="navbar-brand logo" href="./">
-                            <img class="logo-img" src="./images/cloud-backup-svgrepo-com.svg" alt=""><span>Hacker Analytics</span>
-                        </a>
-                    </section>
-                    <section class="navbar-section">
-                        <div class="dropdown">
-                            <a href="#" class="btn btn-link dropdown-toggle" tabindex="0">
-                                Services<i class="icon icon-caret"></i>
+    <div class="header-hero-wrapper">
+        <div class="container yeo-header">
+            <div class="columns">
+                <div class="column col-12">
+                    <header class="navbar">
+                        <section class="navbar-section">
+                            <a class="navbar-brand logo" href="./">
+                                <img class="logo-img" src="./images/cloud-backup-svgrepo-com.svg" alt=""><span>Hacker Analytics</span>
                             </a>
-                            <ul class="menu">
-                                <li><a href="/penetration-testing/">Penetration Testing</a></li>
-                                <li><a href="/compliance-audits/">Compliance Audits</a></li>
-                            </ul>
-                        </div>
-                        <a class="btn btn-primary btn-hire-me" href="contact.html">Contact</a>
-                    </section>
-                </header>
+                        </section>
+                        <section class="navbar-section">
+                            <div class="dropdown">
+                                <a href="#" class="btn btn-link dropdown-toggle" tabindex="0">
+                                    Services<i class="icon icon-caret"></i>
+                                </a>
+                                <ul class="menu">
+                                    <li><a href="/penetration-testing/">Penetration Testing</a></li>
+                                    <li><a href="/compliance-audits/">Compliance Audits</a></li>
+                                </ul>
+                            </div>
+                            <a class="btn btn-primary btn-hire-me" href="contact.html">Contact</a>
+                        </section>
+                    </header>
+                </div>
             </div>
         </div>
-    </div>
 
-    <div class="hero-section">
-        <div class="container slogan">
-            <div class="columns">
-                <div class="column col-12 col-sm-12">
-                    <div class="slogan-content">
-                        <h1>
-                            <span class="slogan-bold">Trusted by Companies Worldwide<span class="blink">_</span></span>
-                        </h1>
-                        <p>"Your security, our mission. Elite penetration testing and compliance solutions for modern businesses."</p>
-                        <div class="cta-buttons">
-                            <a class="btn btn-primary btn-lg btn-start hide-sm" href="contact.html">Get a Free Security Consultation</a>
-                            <a class="btn btn-link btn-lg hide-sm" href="#services">Explore Our Services</a>
+        <div class="hero-section">
+            <div class="container slogan">
+                <div class="columns">
+                    <div class="column col-12 col-sm-12">
+                        <div class="slogan-content">
+                            <h1>
+                                <span class="slogan-bold">Trusted by Companies Worldwide<span class="blink">_</span></span>
+                            </h1>
+                            <p>"Your security, our mission. Elite penetration testing and compliance solutions for modern businesses."</p>
+                            <div class="cta-buttons">
+                                <a class="btn btn-primary btn-lg btn-start hide-sm" href="contact.html">Get a Free Security Consultation</a>
+                                <a class="btn btn-link btn-lg hide-sm" href="#services">Explore Our Services</a>
+                            </div>
                         </div>
                     </div>
                 </div>
+                <a class="btn btn-primary btn-hire-me show-sm" href="contact.html">Get a Free Security Consultation</a>
             </div>
-            <a class="btn btn-primary btn-hire-me show-sm" href="contact.html">Get a Free Security Consultation</a>
         </div>
     </div>
 

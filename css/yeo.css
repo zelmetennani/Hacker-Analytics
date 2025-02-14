@@ -42,6 +42,22 @@ body {
     padding: 0 8rem;
 }
 
+/* Add responsive padding for containers */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 1rem; /* Reduce padding on mobile */
+    }
+    
+    .container.yeo-header {
+        padding: 0.5rem 1rem; /* Adjust header padding on mobile */
+    }
+    
+    .yeo-body {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
 a:focus {
     box-shadow: none;
 }

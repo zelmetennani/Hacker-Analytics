@@ -84,7 +84,16 @@
                         <h2 class="section-title">Contact Us</h2>
                         <p class="section-subtitle">Tell us about your security needs</p>
                         
-                        <form action="https://getform.io/f/8e3cebfe-e16c-4d41-a7fc-8a3caf06c9f7" method="POST">
+                        <form name="contact" 
+                              method="POST" 
+                              data-netlify="true" 
+                              netlify-honeypot="bot-field">
+                            
+                            <input type="hidden" name="form-name" value="contact" />
+                            <p class="hidden">
+                                <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+                            </p>
+
                             <div class="form-group">
                                 <label class="form-label">Name *</label>
                                 <input class="form-input" type="text" name="name" required placeholder="Your name">
@@ -131,7 +140,7 @@
                         <div class="why-choose-us">
                             <h3><i class="fas fa-shield-alt"></i> Why Choose Us?</h3>
                             <ul class="feature-list">
-                                <li><i class="fas fa-check"></i> 100% Manual Security Testing</li>
+                                <li><i class="fas fa-check"></i> Competitive Pricing</li>
                                 <li><i class="fas fa-check"></i> Compliance-Ready Reports</li>
                                 <li><i class="fas fa-check"></i> Expert Security Team</li>
                                 <li><i class="fas fa-check"></i> Fast Response Times</li>
@@ -185,7 +194,7 @@
                                 <a href="/"><i class="fas fa-home"></i> Home</a>
                             </li>
                             <li class="nav-item">
-                                <a href="/services.html"><i class="fas fa-cogs"></i> Services</a>
+                                <a href="/services.html"><i class="fas fa-cogs"></i>  Services</a>
                             </li>
                             <li class="nav-item">
                                 <a href="/contact.html"><i class="fas fa-envelope"></i> Contact</a>

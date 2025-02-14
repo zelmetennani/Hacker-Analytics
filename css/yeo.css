@@ -1723,3 +1723,8 @@ background-image: linear-gradient(134deg, #0C0091 0%, #00A87E 100%);
         margin-top: 2rem;
     }
 }
+
+/* Hide honeypot field */
+.hidden {
+    display: none;
+}

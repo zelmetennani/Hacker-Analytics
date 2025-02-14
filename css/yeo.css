@@ -404,149 +404,118 @@ background-image: linear-gradient(134deg, #0C0091 0%, #00A87E 100%);
 
 
 .yeo-footer {
-    background: #0a007e;
+    background: #1a1a1a;
+    padding: 4rem 0 2rem;
     color: #fff;
-    padding: 3rem 0;
 }
 
-.yeo-footer h4 {
+.yeo-footer-content {
+    margin-bottom: 2rem;
+}
+
+.yeo-footer-content h4 {
+    color: #fff;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.yeo-footer-content h4::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 40px;
+    height: 2px;
+    background: linear-gradient(90deg, #00A87E, #0C0091);
+}
+
+.yeo-footer .nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.yeo-footer .nav-item {
+    margin-bottom: 0.5rem;
+}
+
+.yeo-footer .nav-item a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.9rem;
+}
+
+.yeo-footer .nav-item a:hover {
+    color: #00A87E;
+}
+
+.yeo-footer .nav-item i {
     font-size: 1rem;
-    color: #fff;
+    width: 16px;
+    text-align: center;
 }
 
-.yeo-footer .nav .nav-item a {
-    padding: .3rem 0rem;
-    color: #fff;
-    opacity: 0.8;
-    font-weight: 200;
+.copyright {
+    margin-top: 2rem;
+    color: #888;
+    font-size: 0.9rem;
 }
 
-
-
-@media (max-width: 600px) {
-
-    .slogan {
-        padding-top: 0rem;
-    }
-
-    .slogan h1 {
-        font-size: 1.6rem;
-        line-height: 1.5;
-        margin-bottom: .5rem;
-    }
-
-    .yeo-slogan {
-        padding-bottom: 2rem;
-    }
-
-    .yeo-slogan p {
-        font-size: .7rem;
-        width: 100%;
-        margin-bottom: 1rem;
-    }
-
-    .yeo-do {
-        padding: 1rem 0 2rem 0;
-    }
-
-    .yeo-do .yeo-do-content {
-        padding-right: 0;
-        padding-bottom: 1.5rem;
-        text-align: left;
-        border-bottom: 1px solid #ddd;
-        margin-bottom: 1.5rem;
-    }
-
-    .yeo-client a {
-        margin: 10px 15px;
-    }
-
-    .yeo-price .panel {
-        text-align: center;
-        background: #fff;
-        margin-bottom: 1rem;
-    }
-
-    .yeo-do h3 {
-        font-size: 1rem;
-        font-weight: 700;
-        padding: 1rem 0 .1rem 0;
-    }
-
-    .yeo-work {
-        padding: 2rem 0;
-        text-align: center;
-    }
-
-    .yeo-work .yeo-work-feature {
-        font-size: 2rem;
-    }
-
-    .yeo-open-source {
-        padding: 2rem 0;
-    }
-
-    .open-source-feature {
-        font-size: 2rem;
-    }
-
-    .yeo-client img {
-    height: 30px;
-}
-
+/* Responsive Footer */
+@media (max-width: 768px) {
     .yeo-footer {
-        padding: 2rem 0;
+        padding: 3rem 0 1rem;
     }
-
+    
     .yeo-footer-content {
-        padding-bottom: 1rem;
+        text-align: center;
+        margin-bottom: 2.5rem;
+    }
+    
+    .yeo-footer-content h4::after {
+        left: 50%;
+        transform: translateX(-50%);
     }
 
-    .yeo-footer h4 {
-        font-size: 1rem;
-        color: #fff;
-        margin-bottom: 0;
+    /* Fix for links on small screens */
+    .yeo-footer .nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
     }
 
-    .feature-title {
-        font-weight: 200;
-        font-size: 1rem;
-        padding: 1rem 0 1rem 0;
-        opacity: .5;
+    .yeo-footer .nav-item {
+        margin: 0;
+        padding: 0 0.5rem;
     }
 
-    .yeo-team {
-        padding: 1rem 0;
+    .yeo-footer .nav-item a {
+        white-space: nowrap;
     }
 
-    .yeo-price {
-        padding: 0 0 2rem 0;
+    /* Adjust copyright spacing */
+    .copyright {
+        margin-top: 1.5rem;
+        text-align: center;
+    }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+    .yeo-footer .nav {
+        flex-direction: column;
+        gap: 0.5rem;
     }
 
-    .yeo-team .title {
-        font-size: .8rem;
-        opacity: .5;
-        padding-bottom: 2rem;
-        display: block;
+    .yeo-footer .nav-item {
+        padding: 0;
     }
-
-    .yeo-price .btn-price {
-        padding: .6rem .5rem;
-        background: #382CBE;
-        color: #fff;
-        height: auto;
-        width: 90%;
-        font-size: .8rem;
-    }
-
-    .container {
-        padding: 0 2rem;
-    }
-
-    .container.yeo-header {
-        padding: 1rem 2rem;
-    }
-
 }
 
 /* Update the Dropdown menu styling */

@@ -1613,3 +1613,100 @@ background-image: linear-gradient(134deg, #0C0091 0%, #00A87E 100%);
 .dropdown .btn-link:hover {
     color: #00A87E !important; /* Hover color */
 }
+
+/* Contact Page Styling */
+.contact-form-wrapper {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-label {
+    color: #333;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.form-input, .form-select {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
+}
+
+.form-input:focus, .form-select:focus {
+    border-color: #0C0091;
+    outline: none;
+}
+
+.contact-info-wrapper {
+    padding-left: 2rem;
+}
+
+.why-choose-us, .service-highlights, .contact-info {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border-left: 3px solid #0C0091;
+}
+
+.feature-list {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+.feature-list li {
+    margin: 0.8rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.feature-list li i {
+    color: #00A87E;
+}
+
+.highlight-box {
+    margin: 1rem 0;
+    padding: 1rem;
+    background: rgba(255,255,255,0.5);
+    border-radius: 4px;
+}
+
+.highlight-box h4 {
+    color: #0C0091;
+    margin-bottom: 0.5rem;
+}
+
+.social-links {
+    margin-top: 1rem;
+}
+
+.social-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #0C0091;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #00A87E;
+}
+
+@media (max-width: 768px) {
+    .contact-info-wrapper {
+        padding-left: 0;
+        margin-top: 2rem;
+    }
+}

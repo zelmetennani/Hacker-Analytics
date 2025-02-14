@@ -34,7 +34,7 @@
 </script>
 
 <body>
-    <div class="yeo-slogan">
+    <div class="header-hero-wrapper">
         <div class="container yeo-header">
             <div class="columns">
                 <div class="column col-12">
@@ -45,244 +45,195 @@
                             </a>
                         </section>
                         <section class="navbar-section">
-                            <!--<a class="btn btn-link" href="#we-do">Home</a> -->
-                            <a class="btn btn-primary btn-hire-me" href="index.html">Home</a>
+                            <div class="dropdown">
+                                <a href="/services.html" class="btn btn-link services-link">
+                                    Services
+                                </a>
+                                <ul class="menu">
+                                    <li><a href="/services/penetration-testing.html">Penetration Testing</a></li>
+                                    <li><a href="/services/compliance-audits.html">Compliance Audits</a></li>
+                                </ul>
+                            </div>
+                            <a class="btn btn-primary btn-hire-me" href="contact.html">Contact</a>
                         </section>
                     </header>
                 </div>
             </div>
         </div>
-        <div class="container slogan">
-            <div class="columns">
-                <div class="column col-12 col-sm-12">
-                    <div class="slogan-content">
-                        <h1>
-                            <span class="slogan-bold">Contact<span class="blink">_</span></span>
-                        </h1>
-                    </div>
-                </div>
-                <!--<div class="column col-5 hide-sm">
-                    <img class="slogan-img" src="./images/cybergraphic.png" alt="">
-                </div> -->
-                </div>
-            </div>
-        </div>
-       <!--<div class="yeo-client">
-            <div class="container yeo-client-list">
-                <div class="columns">
-                    <div class="column col-12">
-                        <h3 class="feature-title">
-                        Trusted By The Best Clients
-                    </h3>
-                        <div class="client-logo">
-                            <a href="#" target="_blank">
-                            <img src="./images/algolia.svg" height="40px" alt="">
-                        </a>
-                            <a href="#" target="_blank">
-                            <img src="./images/lapa-logo.svg" height="40px" alt="">
-                        </a>
-                            <a href="#" target="_blank">
-                            <img src="./images/hugo.svg" height="40px" alt="">
-                        </a>
-                            <a href="#" target="_blank">
-                            <img src="./images/codecademy.svg" height="40px" alt="">
-                        </a>
-                            <a href="#" target="_blank">
-                            <img src="./images/aws.svg" height="40px" alt="">
-                        </a>
-                            <a href="#" target="_blank">
-                            <img src="./images/stripe.svg" height="40px" alt="">
-                        </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> --> 
-        <div class="yeo-do" id="info">
-            <div class="container yeo-body">
-                <div class="columns">
-                    <div class="column col-8 col-sm-12">
-                        <div class="yeo-do-content">
-                            <img src="./images/what-we-do-3.svg" alt="">
-                            <h3>Fill out this form, and we'll be in touch</h3>
-                            <p></p>
-                            <form action="https://getform.io/f/8e3cebfe-e16c-4d41-a7fc-8a3caf06c9f7" method="POST" target="_blank">
-                                <p><input class="form-input" type="text" placeholder="Name" required name="Name"></p>
-                                <p><input class="form-input" type="text" placeholder="Email" required name="Email"></p>
-                                <p><input class="form-input" type="text" placeholder="What can we help you with?" required name="Message"></p>
-                                <!--<p>
-                                    <label class="form-label" for="Message">What can we do for you?</label>
-                                    <textarea class="form-input" id="input-example-3" placeholder="Message" rows="4"></textarea>
-                                </p> -->
-                                <p>
-                                  <button class="w3-button w3-light-grey w3-padding-large" type="submit"> SEND MESSAGE 📨 </button>
-                                </p>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- <div class="yeo-work" id="we-work">
-            <div class="container yeo-body">
+        <div class="hero-section">
+            <div class="container slogan">
                 <div class="columns">
                     <div class="column col-12 col-sm-12">
-                        <h2 class="feature-title">How We Work</h2>
-                    </div>
-                    <div class="column col-10 col-sm-12 centered">
-                        <h2 class="yeo-work-feature">
-                        We build <span class="yeo-work-feature-bold">reliable infrastructure</span>, use comprehensive in-house tools.
-                    </h2>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="yeo-price" id="price">
-            <div class="container yeo-body  col-sm-12">
-                <div class="columns">
-                    <div class="column col-4 col-sm-12">
-                        <div class="panel">
-                            <div class="panel-header">
-                                <div class="panel-title"><span>PRO</span></div>
-                            </div>
-                            <div class="panel-body">
-                                <p>
-                                    <span class="price">$2500 </span>
-                                    <span>/ month</span>
-                                </p>
-                                <ul>
-                                    <li><strong>10</strong> billable hours included per month.</li>
-                                    <li>Billable hourly rate of <strong>$300</strong> after the included 10 hours are utilized.</li>
-                                    <li>24/7/365 on-call and 99.9% SLA</li>
-                                    <li>Communication via ticketing system and e-mail.</li>
-                                </ul>
-                            </div>
-                            <div class="panel-footer">
-                                <button class="btn btn-primary btn-price">Contact Us</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="column col-4 col-sm-12">
-                        <div class="panel">
-                            <div class="panel-header">
-                                <div class="panel-title"><span>PREMIUM</span></div>
-                            </div>
-                            <div class="panel-body">
-                                <p>
-                                    <span class="price">$5000 </span>
-                                    <span>/ month</span>
-                                </p>
-                                <ul>
-                                    <li><strong>10</strong> billable hours included per month.</li>
-                                    <li>Billable hourly rate of <strong>$300</strong> after the included 10 hours are utilized.</li>
-                                    <li>24/7/365 on-call and 99.9% SLA</li>
-                                    <li>Communication via ticketing system and e-mail.</li>
-                                </ul>
-                            </div>
-                            <div class="panel-footer">
-                                <button class="btn btn-primary btn-price">Contact Us</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="column col-4 col-sm-12">
-                        <div class="panel">
-                            <div class="panel-header">
-                                <div class="panel-title"><span>ENTERPRISE</span></div>
-                            </div>
-                            <div class="panel-body">
-                                <p>
-                                    <span class="price">$15000 </span>
-                                    <span>/ month</span>
-                                </p>
-                                <ul>
-                                    <li><strong>10</strong> billable hours included per month.</li>
-                                    <li>Billable hourly rate of <strong>$300</strong> after the included 10 hours are utilized.</li>
-                                    <li>24/7/365 on-call and 99.9% SLA</li>
-                                    <li>Communication via ticketing system and e-mail.</li>
-                                </ul>
-                            </div>
-                            <div class="panel-footer">
-                                <button class="btn btn-primary btn-price">Contact Us</button>
-                            </div>
+                        <div class="slogan-content">
+                            <h1>
+                                <span class="slogan-bold">Let's Secure Your Business<span class="blink">_</span></span>
+                            </h1>
+                            <p class="hero-subtitle">Get expert cybersecurity guidance tailored to your needs</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="yeo-team" id="team">
-            <div class="container yeo-body">
-                <div class="columns">
-                    <div class="column col-12">
-                        <h2 class="feature-title">Meet Our Team</h2>
-                    </div>
-                    <div class="column col-4 col-sm-12">
-                        <a href=""><img class="s-circle" src="./images/team-1.jpg" alt=""></a>
-                        <a href="https://www.lapa.ninja/"><span class="name">John Doe</span></a>
-                        <span class="title">DevOps</span>
-                    </div>
-                    <div class="column col-4 col-sm-12">
-                        <a href=""><img class="s-circle" src="./images/team-2.jpg" alt=""></a>
-                        <a href="https://www.lapa.ninja/"><span class="name">Tinh Nguyen</span></a>
-                        <span class="title">Designer</span>
-                    </div>
-                    <div class="column col-4 col-sm-12">
-                        <a href=""><img class="s-circle" src="./images/team-3.jpg" alt=""></a>
-                        <a href="https://www.lapa.ninja/"><span class="name">Maria Oto</span></a>
-                        <span class="title">Developer</span>
+    </div>
+
+    <div class="content-section" style="padding-top: 3rem;">
+        <div class="container yeo-body">
+            <div class="columns">
+                <div class="column col-7 col-sm-12">
+                    <div class="contact-form-wrapper">
+                        <h2 class="section-title">Contact Us</h2>
+                        <p class="section-subtitle">Tell us about your security needs</p>
+                        
+                        <form action="https://getform.io/f/8e3cebfe-e16c-4d41-a7fc-8a3caf06c9f7" method="POST">
+                            <div class="form-group">
+                                <label class="form-label">Name *</label>
+                                <input class="form-input" type="text" name="name" required placeholder="Your name">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="form-label">Company *</label>
+                                <input class="form-input" type="text" name="company" required placeholder="Your company name">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="form-label">Email *</label>
+                                <input class="form-input" type="email" name="email" required placeholder="your@email.com">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="form-label">Phone</label>
+                                <input class="form-input" type="tel" name="phone" placeholder="Your phone number (optional)">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="form-label">Services of Interest *</label>
+                                <select class="form-select" name="service" required>
+                                    <option value="">Select a service...</option>
+                                    <option value="pentest">Penetration Testing</option>
+                                    <option value="compliance">Compliance & Audits</option>
+                                    <option value="both">Both Services</option>
+                                    <option value="other">Other/Not Sure</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="form-label">Message *</label>
+                                <textarea class="form-input" name="message" rows="4" required placeholder="Tell us about your security needs and timeline"></textarea>
+                            </div>
+                            
+                            <button class="btn btn-lg btn-primary" type="submit">Send Message <i class="fas fa-arrow-right"></i></button>
+                        </form>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="yeo-open-source">
-            <div class="container yeo-body">
-                <div class="columns">
-                    <div class="column col-12">
-                        <h2 class="feature-title">We love Open Source</h2>
-                    </div>
-                    <div class="column col-10 centered col-sm-12">
-                        <img class="open-source-img" src="./images/open-source.svg" alt="">
-                        <h2 class="open-source-feature">
-                        We're making 
-                        <br />
-                        Open Source Software
-                    </h2>
-                        <a href="#" class="btn btn-lg btn-open-source">Follow us on Github</a>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-        <div class="yeo-footer">
-            <div class="container">
-                <div class="columns">
-                    <div class="column col-3 col-sm-6">
-                        <div class="yeo-footer-content">
-                            <h4>Connect</h4>
-                            <ul class="nav">
-                                <li class="nav-item">
-                                    <a href=""> X (Twitter)</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="">Linkedin</a>
-                                </li>
+                
+                <div class="column col-5 col-sm-12">
+                    <div class="contact-info-wrapper">
+                        <div class="why-choose-us">
+                            <h3><i class="fas fa-shield-alt"></i> Why Choose Us?</h3>
+                            <ul class="feature-list">
+                                <li><i class="fas fa-check"></i> 100% Manual Security Testing</li>
+                                <li><i class="fas fa-check"></i> Compliance-Ready Reports</li>
+                                <li><i class="fas fa-check"></i> Expert Security Team</li>
+                                <li><i class="fas fa-check"></i> Fast Response Times</li>
                             </ul>
                         </div>
-                    </div>
-                    <div class="column col-3 col-sm-6">
-                        <div class="yeo-footer-content">
-                            <h4>Hacker Analytics LLC 2024 ©</h4>
-                            <ul class="nav">
-                                <!-- <li class="nav-item">
-                                    <a href="">Terms and Conditions</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="">Privacy Policy</a>
-                                </li> -->
-                            </ul>
+                        
+                        <div class="service-highlights">
+                            <h3><i class="fas fa-star"></i> Our Services</h3>
+                            <div class="highlight-box">
+                                <h4>Penetration Testing</h4>
+                                <p>Comprehensive security assessments for web, mobile, API, cloud & network infrastructure</p>
+                            </div>
+                            <div class="highlight-box">
+                                <h4>Compliance & Audits</h4>
+                                <p>Expert guidance for SOC 2, ISO 27001, HIPAA, PCI DSS compliance</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-info">
+                            <h3><i class="fas fa-envelope"></i> Get in Touch</h3>
+                            <div class="social-links">
+                                <a href="https://www.linkedin.com/company/hacker-analytics" target="_blank">
+                                    <i class="fab fa-linkedin"></i> LinkedIn
+                                </a>
+                            </div>
+                            <p>
+                                <a href="mailto:info@hackeranalytics.com" 
+                                   target="_blank"
+                                   style="color: #0C0091; text-decoration: none; transition: color 0.3s ease; display: inline-flex; align-items: center; gap: 8px;">
+                                    <i class="fas fa-envelope"></i> info@hackeranalytics.com
+                                </a>
+                            </p>
+                            
+                            <p><i class="fas fa-clock"></i> Response within 24 hours</p>
+                            
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+
+    <div class="yeo-footer">
+        <div class="container">
+            <div class="columns">
+                <div class="column col-4 col-sm-12">
+                    <div class="yeo-footer-content">
+                        <h4>Navigation</h4>
+                        <ul class="nav">
+                            <li class="nav-item">
+                                <a href="/"><i class="fas fa-home"></i> Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="/services.html"><i class="fas fa-cogs"></i> Services</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="/contact.html"><i class="fas fa-envelope"></i> Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="column col-4 col-sm-12">
+                    <div class="yeo-footer-content">
+                        <h4>Services</h4>
+                        <ul class="nav">
+                            <li class="nav-item">
+                                <a href="/services/penetration-testing.html">Penetration Testing</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="/services/compliance-audits.html">Compliance & Audits</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="column col-4 col-sm-12">
+                    <div class="yeo-footer-content">
+                        <h4>Connect</h4>
+                        <ul class="nav">
+                            <li class="nav-item">
+                                <a href="mailto:info@hackeranalytics.com">
+                                    <i class="fas fa-envelope"></i> info@hackeranalytics.com
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://www.linkedin.com/company/hacker-analytics" target="_blank">
+                                    <i class="fab fa-linkedin"></i> LinkedIn
+                                </a>
+                            </li>
+                        </ul>
+                        <p class="copyright">
+                            Hacker Analytics LLC <span id="current-year"></span> ©
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<script>
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+</script>
 
 </html>

@@ -35,6 +35,9 @@
     <!-- Add Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
+    <!-- Add Three.js library in the head section -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
     <style>
         /* Update header container styles */
         .container.yeo-header {
@@ -208,6 +211,20 @@
                 grid-template-columns: 1fr;
             }
         }
+
+        .security-animation {
+            width: 100%;
+            height: 400px;
+            position: relative;
+        }
+
+        #particleCanvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100% !important;
+            height: 100% !important;
+        }
     </style>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
@@ -254,56 +271,7 @@
                     </div>
                     <div class="column col-5 col-sm-12">
                         <div class="security-animation">
-                            <svg id="security-scan" viewBox="0 0 200 200" width="80%" height="auto">
-                                <!-- Network Grid Background -->
-                                <g id="network-grid">
-                                    <path class="grid-line" d="M20 20h160v160H20z" fill="none" stroke="#0C0091" stroke-width="0.2" opacity="0.1"/>
-                                </g>
-
-                                <!-- Network Lines (Lock Shape) -->
-                                <g id="network-lines">
-                                    <!-- Lock body outline -->
-                                    <path class="network-line" d="M70,80 L130,80 L130,140 L70,140 L70,80" stroke="#00ffd4" stroke-width="0.5" opacity="0.3"/>
-                                    <!-- Lock shackle -->
-                                    <path class="network-line" d="M85,80 L85,60 Q100,40 115,60 L115,80" stroke="#00ffd4" stroke-width="0.5" opacity="0.3"/>
-                                    <!-- Internal connections -->
-                                    <path class="network-line" d="M70,110 L130,110" stroke="#00ffd4" stroke-width="0.5" opacity="0.3"/>
-                                    <path class="network-line" d="M100,80 L100,140" stroke="#00ffd4" stroke-width="0.5" opacity="0.3"/>
-                                </g>
-
-                                <!-- Network Nodes (Lock Shape) -->
-                                <g id="network-nodes">
-                                    <!-- Lock body corners -->
-                                    <circle class="node n1" cx="70" cy="80" r="3" fill="#0C0091"/>
-                                    <circle class="node n2" cx="130" cy="80" r="3" fill="#0C0091"/>
-                                    <circle class="node n3" cx="130" cy="140" r="3" fill="#0C0091"/>
-                                    <circle class="node n4" cx="70" cy="140" r="3" fill="#0C0091"/>
-                                    
-                                    <!-- Lock shackle nodes -->
-                                    <circle class="node n5" cx="85" cy="60" r="3" fill="#0C0091"/>
-                                    <circle class="node n6" cx="100" cy="45" r="3" fill="#0C0091"/>
-                                    <circle class="node n7" cx="115" cy="60" r="3" fill="#0C0091"/>
-                                    
-                                    <!-- Center nodes -->
-                                    <circle class="node center" cx="100" cy="110" r="4" fill="#00A87E"/>
-                                    
-                                    <!-- Inner nodes -->
-                                    <circle class="node inner n8" cx="85" cy="95" r="2" fill="#00ffd4"/>
-                                    <circle class="node inner n9" cx="115" cy="95" r="2" fill="#00ffd4"/>
-                                    <circle class="node inner n10" cx="85" cy="125" r="2" fill="#00ffd4"/>
-                                    <circle class="node inner n11" cx="115" cy="125" r="2" fill="#00ffd4"/>
-                                    <circle class="node inner n12" cx="100" cy="95" r="2" fill="#00ffd4"/>
-                                    <circle class="node inner n13" cx="100" cy="125" r="2" fill="#00ffd4"/>
-                                </g>
-
-                                <!-- Data Pulses -->
-                                <g id="data-pulses">
-                                    <circle class="pulse" r="2" fill="#00ffd4"/>
-                                    <circle class="pulse" r="2" fill="#00ffd4"/>
-                                    <circle class="pulse" r="2" fill="#00ffd4"/>
-                                    <circle class="pulse" r="2" fill="#00ffd4"/>
-                                </g>
-                            </svg>
+                            <canvas id="particleCanvas" style="width: 100%; height: 400px;"></canvas>
                         </div>
                     </div>
                 </div>
@@ -369,7 +337,7 @@
                     </div>
                     <div class="info-item">
                         <h4>Pricing Structure</h4>
-                        <p>Starting at $15,000 for comprehensive assessments. Final pricing based on scope, complexity, and timeline requirements.</p>
+                           <p>Our penetration testing services are tailored to your unique environment, with pricing based on scope, complexity, and reporting needs. Whether you need a focused assessment or a full-scale security evaluation, we provide flexible options to match your business requirements.</p>
                     </div>
                     <div class="info-item">
                         <h4>Next Steps</h4>
@@ -526,71 +494,147 @@
     </script>
 
     <script>
-        // Animate the particles in an asteroid field pattern
-        const particles = document.querySelectorAll('.particle');
-        particles.forEach((particle, index) => {
-            const randomRadius = 40 + Math.random() * 50; // Random orbit radius between 40 and 90
-            const randomSpeed = 3000 + Math.random() * 5000; // Random speed between 3-8s per rotation
-            const startAngle = (index * (360 / particles.length) + Math.random() * 30) * (Math.PI / 180); // Distribute with some randomness
+        // Replace the entire animation script with this simpler version
+        let scene, camera, renderer, particles;
+        let targetPositions, currentState = 'dancing';
+        const STATES = { DANCING: 'dancing', MORPHING: 'morphing', SHIELD: 'shield' };
+
+        function init() {
+            // Scene setup
+            scene = new THREE.Scene();
             
-            anime({
-                targets: particle,
-                loop: true,
-                duration: randomSpeed,
-                cx: [
-                    { 
-                        value: function() {
-                            return 100 + randomRadius * Math.cos(startAngle);
-                        }
-                    },
-                    {
-                        value: function() {
-                            return 100 + randomRadius * Math.cos(startAngle + 2 * Math.PI);
-                        }
-                    }
-                ],
-                cy: [
-                    {
-                        value: function() {
-                            return 120 + randomRadius * Math.sin(startAngle);
-                        }
-                    },
-                    {
-                        value: function() {
-                            return 120 + randomRadius * Math.sin(startAngle + 2 * Math.PI);
-                        }
-                    }
-                ],
-                easing: 'linear',
-                scale: [
-                    { value: [0.5, 1.2], duration: randomSpeed/2, easing: 'easeOutSine' },
-                    { value: 0.5, duration: randomSpeed/2, easing: 'easeInSine' }
-                ],
-                opacity: [
-                    { value: [0.3, 0.8], duration: randomSpeed/2 },
-                    { value: 0.3, duration: randomSpeed/2 }
-                ]
+            const container = document.querySelector('.security-animation');
+            const aspect = container.clientWidth / container.clientHeight;
+            camera = new THREE.PerspectiveCamera(75, aspect, 0.1, 1000);
+            
+            renderer = new THREE.WebGLRenderer({ 
+                canvas: document.getElementById('particleCanvas'),
+                alpha: true,
+                antialias: true 
             });
+            
+            renderer.setSize(container.clientWidth, container.clientHeight);
+            
+            // Create particles
+            const geometry = new THREE.BufferGeometry();
+            const particleCount = 3000;
+            const positions = new Float32Array(particleCount * 3);
+            const colors = new Float32Array(particleCount * 3);
+            targetPositions = new Float32Array(particleCount * 3);
+            
+            // Initial random positions
+            for(let i = 0; i < positions.length; i += 3) {
+                positions[i] = THREE.MathUtils.randFloatSpread(100);
+                positions[i + 1] = THREE.MathUtils.randFloatSpread(100);
+                positions[i + 2] = THREE.MathUtils.randFloatSpread(100);
+                
+                // Blue-cyan colors
+                colors[i] = 0;
+                colors[i + 1] = THREE.MathUtils.randFloat(0.5, 1);
+                colors[i + 2] = 1;
+            }
+            
+            // Update the shield shape calculation with hammer shape
+            for(let i = 0; i < positions.length; i += 3) {
+                let x, y, z;
+                const t = i / positions.length;
+                
+                // Define hammer dimensions
+                const headWidth = 60;
+                const headHeight = 25;
+                const handleWidth = 12;
+                const handleLength = 70;
+                
+                if (t < 0.6) { // Hammer head
+                    if (Math.random() < 0.8) { // Main head block
+                        x = THREE.MathUtils.randFloatSpread(headWidth);
+                        y = THREE.MathUtils.randFloatSpread(headHeight) + handleLength/2;
+                        z = THREE.MathUtils.randFloatSpread(headHeight);
+                    } else { // Head edges (for better definition)
+                        const side = Math.random() < 0.5 ? -1 : 1;
+                        x = side * headWidth/2;
+                        y = THREE.MathUtils.randFloatSpread(headHeight) + handleLength/2;
+                        z = THREE.MathUtils.randFloatSpread(headHeight);
+                    }
+                } else { // Handle
+                    x = THREE.MathUtils.randFloatSpread(handleWidth);
+                    y = THREE.MathUtils.randFloat(-handleLength/2, handleLength/2);
+                    z = THREE.MathUtils.randFloatSpread(handleWidth);
+                }
+                
+                targetPositions[i] = x;
+                targetPositions[i + 1] = y;
+                targetPositions[i + 2] = z;
+            }
+            
+            geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+            geometry.setAttribute('color', new THREE.BufferAttribute(colors, 3));
+            
+            const material = new THREE.PointsMaterial({
+                size: 2.5,
+                vertexColors: true,
+                transparent: true,
+                opacity: 0.9,
+                blending: THREE.AdditiveBlending
+            });
+            
+            particles = new THREE.Points(geometry, material);
+            scene.add(particles);
+            
+            camera.position.z = 250;
+            
+            // Start morphing after 2 seconds
+            setTimeout(() => { currentState = STATES.MORPHING; }, 2000);
+        }
+
+        function animate() {
+            requestAnimationFrame(animate);
+            
+            const positions = particles.geometry.attributes.position.array;
+            const time = Date.now() * 0.001;
+            
+            if (currentState === STATES.DANCING) {
+                for(let i = 0; i < positions.length; i += 3) {
+                    positions[i] += Math.sin(time + i) * 0.3;
+                    positions[i + 1] += Math.cos(time + i) * 0.3;
+                    positions[i + 2] += Math.sin(time + i) * 0.3;
+                }
+            } else if (currentState === STATES.MORPHING) {
+                let morphComplete = true;
+                for(let i = 0; i < positions.length; i += 3) {
+                    for(let j = 0; j < 3; j++) {
+                        const diff = targetPositions[i + j] - positions[i + j];
+                        positions[i + j] += diff * 0.05;
+                        if (Math.abs(diff) > 0.1) morphComplete = false;
+                    }
+                }
+                if (morphComplete) currentState = STATES.SHIELD;
+            } else {
+                particles.rotation.z = Math.sin(time * 0.3) * 0.1;
+                particles.rotation.y = Math.cos(time * 0.2) * 0.1;
+                for(let i = 0; i < positions.length; i += 3) {
+                    positions[i] += Math.sin(time + positions[i] * 0.01) * 0.03;
+                    positions[i + 1] += Math.cos(time + positions[i + 1] * 0.01) * 0.03;
+                    positions[i + 2] += Math.sin(time + positions[i + 2] * 0.01) * 0.03;
+                }
+            }
+            
+            particles.geometry.attributes.position.needsUpdate = true;
+            renderer.render(scene, camera);
+        }
+
+        // Initialize on load
+        window.addEventListener('load', () => {
+            init();
+            animate();
         });
 
-        // Add gentle bounce to the lock
-        anime({
-            targets: '#lock-base',
-            translateY: ['2px', '-2px'],
-            direction: 'alternate',
-            loop: true,
-            duration: 1500,
-            easing: 'easeInOutQuad'
-        });
-
-        // Gentle pulse for the lock outline
-        anime({
-            targets: '#lock-body',
-            strokeWidth: [4, 5],
-            direction: 'alternate',
-            loop: true,
-            duration: 1500,
-            easing: 'easeInOutQuad'
+        // Handle window resize
+        window.addEventListener('resize', () => {
+            const container = document.querySelector('.security-animation');
+            camera.aspect = container.clientWidth / container.clientHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(container.clientWidth, container.clientHeight);
         });
     </script>
 

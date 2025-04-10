@@ -53,8 +53,8 @@ body {
     }
     
     .yeo-body {
-        padding-left: 1rem;
-        padding-right: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
     }
 }
 
@@ -690,7 +690,7 @@ background-image: linear-gradient(134deg, #0C0091 0%, #00A87E 100%);
 }
 
 .service-card:hover::after {
-    width: 100%;
+        width: 100%;
 }
 
 .service-card i.fa-check {
@@ -702,7 +702,7 @@ background-image: linear-gradient(134deg, #0C0091 0%, #00A87E 100%);
 .section-title {
     text-align: center;
     font-size: 2.5rem;
-    margin-bottom: 1rem;
+        margin-bottom: 1rem;
     color: #0C0091;
 }
 
@@ -1197,7 +1197,7 @@ background-image: linear-gradient(134deg, #0C0091 0%, #00A87E 100%);
 .quote-icon {
     color: #0C0091;
     font-size: 2rem;
-    margin-bottom: 1rem;
+        margin-bottom: 1rem;
     opacity: 0.2;
 }
 
@@ -1253,8 +1253,8 @@ background-image: linear-gradient(134deg, #0C0091 0%, #00A87E 100%);
 .cta-wrapper {
     position: relative;
     z-index: 1;
-    text-align: center;
-}
+        text-align: center;
+    }
 
 /* Add subtle pattern overlay */
 .cta-section::before {
@@ -1318,7 +1318,7 @@ background-image: linear-gradient(134deg, #0C0091 0%, #00A87E 100%);
     .gradient-heading {
         font-size: 2rem;
     }
-    
+
     .testimonial {
         padding: 2rem;
     }
@@ -1423,7 +1423,7 @@ background-image: linear-gradient(134deg, #0C0091 0%, #00A87E 100%);
 }
 
 .service-type i {
-    font-size: 2rem;
+        font-size: 2rem;
     color: #00A87E;
     margin-bottom: 1rem;
 }
@@ -1449,7 +1449,7 @@ background-image: linear-gradient(134deg, #0C0091 0%, #00A87E 100%);
 }
 
 .service-type ul li i {
-    font-size: 1rem;
+        font-size: 1rem;
     margin: 0;
 }
 
@@ -1482,7 +1482,7 @@ background-image: linear-gradient(134deg, #0C0091 0%, #00A87E 100%);
 }
 
 .info-item h4 {
-    color: #fff;
+        color: #fff;
     margin-bottom: 0.5rem;
     font-size: 1.1rem;
 }
@@ -1584,13 +1584,13 @@ background-image: linear-gradient(134deg, #0C0091 0%, #00A87E 100%);
 }
 
 .dropdown:hover .menu {
-    display: block;
+        display: block;
     opacity: 1;
     transform: translateY(0);
-}
+    }
 
 .dropdown .menu a {
-    color: #fff;
+        color: #fff;
     padding: 12px 20px;
     display: block;
     text-decoration: none;

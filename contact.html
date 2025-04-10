@@ -244,4 +244,31 @@
     document.getElementById('current-year').textContent = new Date().getFullYear();
 </script>
 
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const dropdowns = document.querySelectorAll('.dropdown');
+        
+        dropdowns.forEach(dropdown => {
+            let timeoutId;
+            
+            dropdown.addEventListener('mouseenter', () => {
+                clearTimeout(timeoutId);
+                const menu = dropdown.querySelector('.menu');
+                if (menu) {
+                    menu.style.display = 'block';
+                }
+            });
+            
+            dropdown.addEventListener('mouseleave', () => {
+                timeoutId = setTimeout(() => {
+                    const menu = dropdown.querySelector('.menu');
+                    if (menu) {
+                        menu.style.display = 'none';
+                    }
+                }, 300);
+            });
+        });
+    });
+</script>
+
 </html>

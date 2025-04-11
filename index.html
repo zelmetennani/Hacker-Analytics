@@ -203,9 +203,10 @@
 
         .stats-grid {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 2rem;
             margin: 3rem 0;
+            padding: 0 1rem;
         }
 
         .stat-item {
@@ -214,10 +215,30 @@
             background: #f8f9fa;
             border-radius: 8px;
             transition: transform 0.3s ease;
+            min-height: 200px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
 
         .stat-item:hover {
             transform: translateY(-5px);
+        }
+
+        .stat-content {
+            padding: 1rem;
+        }
+
+        .stat-content h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: #0C0091;
+        }
+
+        .stat-content p {
+            font-size: 1rem;
+            color: #666;
+            line-height: 1.5;
         }
 
         .service-card {
@@ -256,13 +277,37 @@
 
         @media (max-width: 768px) {
             .stats-grid {
-                grid-template-columns: repeat(2, 1fr);
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                gap: 1.5rem;
+            }
+            
+            .stat-item {
+                min-height: 180px;
+                padding: 1.5rem;
+            }
+            
+            .stat-content h3 {
+                font-size: 1.5rem;
             }
         }
 
         @media (max-width: 480px) {
             .stats-grid {
                 grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+            
+            .stat-item {
+                min-height: auto;
+                padding: 1.5rem;
+            }
+            
+            .stat-content h3 {
+                font-size: 1.3rem;
+            }
+            
+            .icon-feature {
+                font-size: 2rem;
             }
         }
     </style>
